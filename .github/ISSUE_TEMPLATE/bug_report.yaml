@@ -1,0 +1,79 @@
+name: Bug Report
+description: File a bug report
+title: "[BUG] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: mdtversion
+    attributes:
+      label: MDT Version
+      description: What version of MDT are you running?
+      options:
+        - 8456
+        - 8450
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: osversion
+    attributes:
+      label: OS Version
+      description: What version of Windows are you running?
+      options:
+        - 10 21H2
+        - 11 21H2
+        - 10 21H1
+        - 10 20H2
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: mdtcli
+    attributes:
+      label: MDT Software Center
+      description: What version of MDT Software Center are you running?
+      placeholder: 1.0
+    validations:
+      required: true
+  - type: input
+    id: mdtserver
+    attributes:
+      label: MDT Server
+      description: What version of MDT Server are you running?
+      placeholder: 1.0
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: repdrocuce
+    attributes:
+      label: How to reproduce?
+      decscription: Explain us how to reproduce the bug.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+      validations:
+        required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: additional
+    attributes:
+      label: Addiational informations
+      description: Do you havce additional informations to share with us ?
